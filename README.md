@@ -1,10 +1,10 @@
-# 学習中に作成したサンプルサイト
+# Study site coding 01
 
 下記の無料コーディング練習所の「【初級編】企業サイト」に取り組む。
 
 https://webdesigner-go.com/coding-practice/beginner/
 
-## 内容
+## Specification
 
 - Googleフォント使用
   - 欧文「Roboto」
@@ -16,10 +16,16 @@ https://webdesigner-go.com/coding-practice/beginner/
 - スマホの時はグローバルナビはハンバーガメニュー
 - favicon画像はXDから反映
 
-## ひとこと
+## Note
 
 CSS設計はBEMを指定されているけど、このコーディングの目的がFlocssのアレンジバージョンであるPDFLOCSSを使ってみることだったため、CSS設計はPDFLOCSSでコーディング。
 
 PDFLOCSSについては下記を参考に。
 
 https://zenn.dev/wagashi_osushi/books/94efd21a66ccaa/viewer
+
+## Coding environment
+
+Webpack × npm scripts
+
+https://github.com/oshima-daiki/webpack-starter
