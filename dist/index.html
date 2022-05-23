@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Works</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <header class="l-header">
+        <div class="l-header__inner">
+          <div class="l-header__logo">
+            <a href="/"><img src="./images/sample.jpg" alt="" /></a>
+          </div>
+          <nav class="l-header__nav">
+            <ul class="l-header__list">
+              <li class="l-header__item">
+                <a class="l-header__link" href="#">About</a>
+              </li>
+              <li class="l-header__item">
+                <a class="l-header__link" href="#">Works</a>
+              </li>
+              <li class="l-header__item">
+                <a class="l-header__link" href="#">News</a>
+              </li>
+              <li class="l-header__item">
+                <a class="l-header__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="l-main">
+        <div class="l-main_inner">
+          <!-- topページのmvセクション -->
+          <section class="p-top-mv">
+            <div class="p-top-mv__inner">
+              <h1 class="p-top-mv-heading"></h1>
+              <div class="p-top-mv__mv">
+                <img src="" alt="" />
+              </div>
+            </div>
+          </section>
+          <!-- topページのaboutセクション -->
+          <section class="p-top-about">
+            <div class="p-top-about__inner">
+              <h2 class="p-top-about__heading">about</h2>
+              <div class="p-top-about__button">
+                <a href="#!" class="c-button c-button--primary">primary</a>
+              </div>
+              <div class="p-top-about__button">
+                <a
+                  href="#!"
+                  class="c-button c-button--primary c-button--full-width"
+                  >primary full-width</a
+                >
+              </div>
+              <div class="p-top-about__button">
+                <a href="#!" class="c-button c-button--secondary">secondary</a>
+              </div>
+              <div class="p-top-about__button">
+                <a
+                  href="#!"
+                  class="c-button c-button--secondary c-button--full-width"
+                  >secondary full-width</a
+                >
+              </div>
+            </div>
+          </section>
+          <!-- topページのworksセクション -->
+          <section class="p-top-works">
+            <div class="p-top-works__inner">
+              <h2 class="p-top-works__heading">Works</h2>
+              <ul class="p-top-works__tabs">
+                <li class="p-top-works__tab js-tab is-active">Work1</li>
+                <li class="p-top-works__tab js-tab">Work2</li>
+                <li class="p-top-works__tab js-tab">Work3</li>
+              </ul>
+              <div class="p-top-works__panels">
+                <div class="p-top-works__panel is-active">
+                  <h3 class="p-top-works__work-heading">Work1</h3>
+                  <img src="./images/sample.jpg" alt="Works1" />
+                </div>
+                <div class="p-top-works__panel">
+                  <h3 class="p-top-works__work-heading">Work2</h3>
+                  <img src="./images/sample.jpg" alt="Works2" />
+                </div>
+                <div class="p-top-works__panel">
+                  <h3 class="p-top-works__work-heading">Work3</h3>
+                  <img src="./images/sample.jpg" alt="Works3" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="p-contact">
+            <h2 class="c-heading">Contact</h2>
+            <form
+              class="c-form p-contact__form"
+              action=""
+              method=""
+              name="contact-form"
+            >
+              <div class="p-contact__item">
+                <div class="p-contact__label"><label for="">NAME</label></div>
+                <div class="p-contact__text">
+                  <input type="text" id="name" name="your-name" />
+                </div>
+              </div>
+              <div class="p-contact__item">
+                <div class="p-contact__label"><label for="">E-mail</label></div>
+                <div class="p-contact__text">
+                  <input type="email" id="email" name="your-email" />
+                </div>
+              </div>
+              <div class="p-contact__item">
+                <div class="p-contact__label">
+                  <label for="">MESSAGE</label>
+                </div>
+                <div class="p-contact__text">
+                  <textarea id="message" name="your-message"></textarea>
+                </div>
+              </div>
+              <input class="c-btn" type="button" value="送信" />
+            </form>
+          </section>
+        </div>
+      </main>
+      <footer class="l-footer">
+        <div class="l-container">
+          <div class="l-footer__content">
+            <small class="l-footer__copyright">&copy; 2020 My Works</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./bundle.js"></script>
+  </body>
+</html>

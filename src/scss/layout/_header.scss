@@ -1,0 +1,50 @@
+@use '../foundation/setting' as *;
+
+.l-header {
+  background-color: $c-base;
+  padding-top: 20px;
+  @include mq{
+    display: flex;
+    align-items: center;
+    height: 270px;
+    padding: 0;
+  }
+
+  &__logo {
+    text-align: center;
+    a {
+      display: inline-block;
+    }
+  }
+  &__nav {
+    padding: 8px 0;
+    @include mq{
+      padding: 0;
+    }
+  }
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    list-style: none;
+  }
+  &__item {
+    padding-right: 20px;
+    font-size: rem(12px);
+    @include mq{
+      font-size: rem(14px);
+      padding-right: 0 30px;
+    }
+    &._sns {
+      padding: 0;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+    }
+    a {
+      color: #000;
+    }
+  }
+}
