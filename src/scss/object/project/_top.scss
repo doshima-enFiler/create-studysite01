@@ -19,19 +19,35 @@
 
 // スタイル
 .p-top-mv {
+  position: relative;
   margin-bottom: 80px;
+  width: 100vw;
+  height: 460px;
+  @include mq{
+    height: 600px;
+  }
   &__inner {
-    width: 100vw;
-    height: 460px;
-    @include mq{
-      height: 600px;
-    }
+    position: relative;
+    top: 40%;
+    height: 100%;
   }
   &__heading {
+    width: 100%;
+    text-align: center;
+    color: #fff;
     font-size: rem(32px);
   }
-  &__mv {
+  &__catch{
     width: 100%;
+    text-align: center;
+    color: #fff;
+    font-style: rem(16px);
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
   }
 }
 
