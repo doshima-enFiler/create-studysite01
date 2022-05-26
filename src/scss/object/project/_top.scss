@@ -5,12 +5,12 @@
 %p-top-inner{
   width: 100%;
   max-width: $inner-width;
-  padding: 0 5%;
+  padding: 0 20px;
 }
 %p-top-heading{
   margin-bottom: 20px;
   padding: 0 0 10px 10px;
-  border-bottom: 2px solid $c-main;
+  color: $c-main;
   font-size: rem(20px);
   @include mq{
     font-size: rem(24px);
@@ -65,39 +65,12 @@
   }
 }
 
-.p-top-works{
+.p-top-service{
   margin-bottom: 80px;
   &__inner{
     @extend %p-top-inner;
   }
   &__heading{
     @extend %p-top-heading;
-    padding: 0 10px 10px 0;
-    text-align: right;
-  }
-  &__tabs{
-    display: flex;
-  }
-  &__tab{
-    width: 100%;
-    padding: 5px 10px;
-    background-color: #d9d9d9;
-    text-align: center;
-    cursor: pointer;
-    &.is-active{
-      background-color: $c-main;
-      color: #fff;
-      font-weight: bold;
-    }
-  }
-  &__panels{
-    border: 1px solid $c-main;
-    padding: 30px;
-  }
-  &__panel{
-    display: none;
-    &.is-active{
-      display: block;
-    }
   }
 }
