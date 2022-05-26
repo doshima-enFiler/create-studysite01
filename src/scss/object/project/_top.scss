@@ -2,56 +2,121 @@
 @use '../../foundation/setting' as *;
 
 // @extendのやつ
-%p-top-inner{
+%p-top-inner {
+  position: relative;
   width: 100%;
   max-width: $inner-width;
   padding: 0 20px;
-}
-%p-top-heading{
-  margin-bottom: 20px;
-  padding: 0 0 10px 10px;
-  color: $c-main;
-  font-size: rem(20px);
   @include mq{
-    font-size: rem(24px);
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+}
+%p-top-heading {
+  margin-bottom: 22px;
+  padding: 0;
+  color: $c-main;
+  font-size: rem(80px);
+  @include mq {
+    font-size: rem(40px);
+    margin-bottom: 53px;
   }
 }
 
 // スタイル
 .p-top-mv {
-  position: relative;
   margin-bottom: 80px;
-  width: 100vw;
-  height: 460px;
-  @include mq{
-    height: 600px;
-  }
   &__inner {
     position: relative;
-    top: 40%;
-    height: 100%;
+    overflow: hidden;
+    width: 100vw;
+    height: 460px;
+    @include mq {
+      height: 600px;
+    }
+  }
+  &__body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   &__heading {
     width: 100%;
     text-align: center;
     color: #fff;
-    font-size: rem(32px);
+    font-family: $roboto;
+    font-size: rem(80px);
+    font-weight: bold;
+    line-height: 1;
   }
-  &__catch{
+  &__catch {
     width: 100%;
     text-align: center;
     color: #fff;
-    font-style: rem(16px);
+    font-style: rem(20px);
   }
   &__bg {
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
     z-index: -1;
+  }
+  &__bg-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 .p-top-news {
+  margin-bottom: 60px;
+  &__inner {
+    @extend %p-top-inner;
+    @include mq{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__heading {
+    @extend %p-top-heading;
+    @include mq{
+      display: inline-block;
+      width: 20%;
+    }
+  }
+  &__list{
+    @include mq{
+      width: 70%;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid #ededed;
+    color: inherit;
+    font-size: rem(15px);
+    &:first-child {
+      padding-top: 0;
+    }
+    @include mq{
+      display: flex;
+      justify-content: left;
+    }
+  }
+  &__date{
+    font-family: $roboto;
+    @include mq{
+      margin-right: 40px;
+    }
+  }
+}
+
+.p-top-service {
   margin-bottom: 80px;
   &__inner {
     @extend %p-top-inner;
@@ -59,18 +124,53 @@
   &__heading {
     @extend %p-top-heading;
   }
-  &__button{
-    margin-top: 16px;
+  &__heading-sub {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    color: #f2f2f2;
+    font-family: $roboto;
+    font-size: rem(70px);
+    font-weight: bold;
+    line-height: 1.5;
+    z-index: -1;
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include mq {
+      gap: 30px;
+    }
+  }
+  &__item {
+    width: 100%;
+    padding: 40px 30px;
+    background-color: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
     text-align: center;
+    @include mq {
+      width: calc((100% - 30px * 2) / 3);
+    }
   }
-}
-
-.p-top-service{
-  margin-bottom: 80px;
-  &__inner{
-    @extend %p-top-inner;
+  &__item-icon {
+    .material-icons{
+      color: $c-main;
+      font-size: rem(60px);
+      line-height: 1;
+    }
   }
-  &__heading{
-    @extend %p-top-heading;
+  &__item-heading{
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  &__item-text{
+    font-size: rem(14px);
+    text-align: left;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    word-break: break-all;
   }
 }
