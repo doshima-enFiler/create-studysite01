@@ -1,6 +1,7 @@
 @use '../foundation/setting' as *;
 
 .l-footer{
+  z-index: 18;
   background-color: $c-main;
   &__inner{
     padding: 30px 20px;
