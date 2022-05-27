@@ -1,1 +1,1 @@
-$((function(){$(".p-top-works__tab.js-tab").click((function(){const s=$(this).index();$(".p-top-works__tab.js-tab").removeClass("is-active").eq(s).addClass("is-active"),$(".p-top-works__panel").removeClass("is-active").eq(s).addClass("is-active")}))}));
+(()=>{const e=document.getElementById("jsHamburger"),t=document.querySelectorAll(".l-header__hamburger-line"),l=document.getElementById("jsNav");e.addEventListener("click",(function(){l.classList.toggle("is-open");for(let e=0;e<t.length;e++)t[e].classList.toggle("is-open")}))})();

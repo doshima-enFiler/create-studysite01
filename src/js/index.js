@@ -1,7 +1,12 @@
-$(function(){
-  $('.p-top-works__tab.js-tab').click(function(){
-    const top = $(this).index();
-    $('.p-top-works__tab.js-tab').removeClass('is-active').eq(top).addClass('is-active');
-    $('.p-top-works__panel').removeClass('is-active').eq(top).addClass('is-active');
-  });
+// ハンバーガーメニュー
+const hamburger = document.getElementById('jsHamburger');
+const hamburgerLine = document.querySelectorAll('.l-header__hamburger-line');
+const headerNav = document.getElementById('jsNav');
+
+hamburger.addEventListener('click', function () {
+    headerNav.classList.toggle('is-open');
+    for (let i = 0; i < hamburgerLine.length; i++) {
+      hamburgerLine[i].classList.toggle('is-open');
+    }
 });
+
