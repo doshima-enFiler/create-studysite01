@@ -8,19 +8,21 @@
   max-width: $inner-width;
   padding: 0 20px;
   @include mq{
+    width: 95%;
     max-width: 1110px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 0;
   }
 }
 %p-top-heading {
   margin-bottom: 22px;
   padding: 0;
   color: $c-main;
-  font-size: rem(80px);
+  font-size: rem(32px);
   @include mq {
-    font-size: rem(40px);
     margin-bottom: 53px;
+    font-size: rem(40px);
+    line-height: 1;
   }
 }
 
@@ -50,12 +52,18 @@
     font-size: rem(80px);
     font-weight: bold;
     line-height: 1;
+    @include mq{
+      font-size: rem(160px);
+    }
   }
   &__catch {
     width: 100%;
     text-align: center;
     color: #fff;
     font-style: rem(20px);
+    @include mq{
+      font-size: rem(24px);
+    }
   }
   &__bg {
     position: absolute;
@@ -78,7 +86,7 @@
     @extend %p-top-inner;
     @include mq{
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: no-wrap;
       justify-content: space-between;
     }
   }
@@ -86,12 +94,12 @@
     @extend %p-top-heading;
     @include mq{
       display: inline-block;
-      width: 20%;
+      min-width: 250px;
     }
   }
   &__list{
     @include mq{
-      width: 70%;
+      max-width: 850px;
     }
   }
   &__link {
@@ -118,11 +126,17 @@
 
 .p-top-service {
   margin-bottom: 80px;
+  @include mq{
+    margin-bottom: 100px;
+  }
   &__inner {
     @extend %p-top-inner;
   }
   &__heading {
     @extend %p-top-heading;
+    @include mq{
+      padding-top: 50px;
+    }
   }
   &__heading-sub {
     position: absolute;
@@ -133,7 +147,13 @@
     font-size: rem(70px);
     font-weight: bold;
     line-height: 1.5;
+    letter-spacing: 0.03em;
     z-index: -1;
+    @include mq{
+      right: -30px;
+      font-size: rem(168px);
+      line-height: 1;
+    }
   }
   &__body {
     display: flex;
@@ -152,6 +172,7 @@
     text-align: center;
     @include mq {
       width: calc((100% - 30px * 2) / 3);
+      padding: 50px;
     }
   }
   &__item-icon {
@@ -159,12 +180,18 @@
       color: $c-main;
       font-size: rem(60px);
       line-height: 1;
+      @include mq{
+        font-size: rem(48px);
+      }
     }
   }
   &__item-heading{
     margin-bottom: 10px;
     font-weight: bold;
     line-height: 1;
+    @include mq{
+      font-size: rem(18px);
+    }
   }
   &__item-text{
     font-size: rem(14px);
