@@ -12,28 +12,20 @@
     padding: 0;
   }
 }
-%p-company-heading {
-  margin-bottom: 22px;
-  padding: 0;
-  color: $c-main;
-  font-size: rem(32px);
-  @include mq {
-    margin-bottom: 53px;
-    font-size: rem(40px);
-    line-height: 1;
-  }
-}
 
 // スタイル
 .p-company-mv {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
+  @include mq{
+    margin-bottom: 55px;
+  }
   &__inner {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 460px;
+    height: 160px;
     @include mq {
-      height: 600px;
+      height: 190px;
     }
   }
   &__heading {
@@ -45,11 +37,11 @@
     text-align: center;
     color: #fff;
     font-family: $roboto;
-    font-size: rem(80px);
+    font-size: rem(28px);
     font-weight: bold;
     line-height: 1;
     @include mq{
-      font-size: rem(160px);
+      font-size: rem(40px);
     }
   }
   &__bg {
@@ -64,5 +56,103 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.p-company-info{
+  margin-bottom: 50px;
+  @include mq{
+    margin-bottom: 80px;
+  }
+  &__inner{
+    @extend %p-company-inner;
+  }
+  &__table{
+    width: 100%;
+  }
+  &__item{
+    border-bottom: 1px solid #ddd;
+  }
+  &__item-heading{
+    width: 30%;
+    padding: 24px 0;
+    font-size: rem(14px);
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    @include mq{
+      width: 25%;
+      padding: 33px 30px;
+      font-size: rem(15px);
+    }
+  }
+  &__item-data{
+    padding: 24px 0;
+    font-size: rem(14px);
+    text-align: left;
+    vertical-align: top;
+    @include mq{
+      padding: 33px 30px;
+      font-size: rem(15px);
+    }
+  }
+}
+
+.p-company-map{
+  margin-bottom: 45px;
+  @include mq{
+    margin-bottom: 100px;
+  }
+  &__inner{
+    @extend %p-company-inner;
+  }
+  &__map{
+    width: 100%;
+    height: 300px;
+  }
+  &__link{
+    display: block;
+    font-size: rem(12px);
+    text-align: right;
+    text-decoration: underline;
+    line-height: 2.25;
+  }
+}
+
+
+.p-company-news {
+  margin-bottom: 50px;
+  &__inner {
+    @extend %p-company-inner;
+    @include mq{
+      display: flex;
+      flex-wrap: no-wrap;
+      justify-content: space-between;
+    }
+  }
+  &__list{
+    @include mq{
+      max-width: 850px;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid #ededed;
+    color: inherit;
+    font-size: rem(15px);
+    &:first-child {
+      padding-top: 0;
+    }
+    @include mq{
+      display: flex;
+      justify-content: left;
+    }
+  }
+  &__date{
+    font-family: $roboto;
+    @include mq{
+      margin-right: 40px;
+    }
   }
 }

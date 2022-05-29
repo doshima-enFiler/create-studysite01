@@ -46,16 +46,14 @@
         <div class="l-main_inner">
           <!-- companyページのmvセクション -->
           <section class="p-company-mv">
-            <div class="p-masssage-mv__inner">
-              <h1 class="p-company-mv-heading">会社概要</h1>
-              <div class="p-company-mv__mv">
-                <picture class="p-company-mv__images">
+            <div class="p-company-mv__inner">
+              <h1 class="p-company-mv__heading">会社概要</h1>
+                <picture class="p-company-mv__bg">
                   <source
                     srcset="./images/pc_bg_mv.jpg"
                     media="(min-width: 600px)"
                   />
-                  <img src="./images/sp_mv.jpg" alt="会社概要" />
-                </picture>
+                  <img class="p-company-mv__bg-image" src="./images/sp_mv.jpg" alt="会社概要" />
               </div>
             </div>
           </section>
@@ -90,7 +88,8 @@
           </section>
           <section class="p-company-map">
             <div class="p-company-map__inner">
-              <img class="p-company-map__image" src="./images/map.png" alt="所在地">
+                <iframe class="p-company-map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.656784611316!2d139.80851171550466!3d35.710062680187576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1653812062339!5m2!1sja!2sjp" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <a class="p-company-map__link" href="">Google mapで見る</a>
             </div>
           </section>
           <section class="p-company-news">

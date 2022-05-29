@@ -54,7 +54,7 @@ small {
 }
 
 //SP
-@include mq(md, max) {
+@include mq(lg, max) {
   ._pc {
     display: none;
   }
